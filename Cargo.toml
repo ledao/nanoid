@@ -1,6 +1,6 @@
 [package]
 name = "idnano"
-version = "0.8.0"
+version = "0.8.1"
 edition = "2018"
 description = "a simple nanoid generator"
 license-file = "./LICENSE"
