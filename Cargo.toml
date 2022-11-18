@@ -2,6 +2,11 @@
 name = "nanoid"
 version = "0.8.0"
 edition = "2018"
+description = "a simple nanoid generator"
+license-file = "./LICENSE"
+homepage = "https://github.com/ledao/nanoid"
+documentation = "https://github.com/ledao/nanoid"
+
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
