@@ -1,5 +1,5 @@
 [package]
-name = "nanoid"
+name = "tinyid"
 version = "0.8.0"
 edition = "2018"
 description = "a simple nanoid generator"
