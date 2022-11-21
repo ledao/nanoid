@@ -5,7 +5,7 @@ nanoid is a rust version of [nanoid](https://github.com/aidarkhanov/nanoid), imp
 Open ```Cargo.toml``` file, and add dependencies.
 ```
 [dependencies]
-idnano = "0.8.3"
+idnano = "0.8.4"
 ```
 
 Use macro to generate id.
