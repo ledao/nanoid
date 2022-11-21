@@ -64,7 +64,7 @@ pub fn new() -> String {
 }
 
 #[macro_export]
-pub macro_rules! idnano {
+macro_rules! idnano {
     () => {
         new()
     };
