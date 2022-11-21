@@ -63,6 +63,19 @@ pub fn new() -> String {
     return generate_string(DEFAULT_ALPHABET, DEFAULT_SIZE);
 }
 
+macro_rules! idnano {
+    () => {
+        new()
+    };
+    ($size: expr) => {
+        generate_string(DEFAULT_ALPHABET, $size)
+    };
+    ($size: expr, $alphabet: expr) => {
+        generate_string($alphabet, $size)
+    };
+
+}
+
 #[cfg(test)]
 mod tests {
     use std::collections::HashMap;
@@ -206,5 +219,20 @@ mod tests {
     #[test]
     fn generate_id() {
         let _id = new();
+    }
+
+    #[test]
+    fn test_macros() {
+        //default id
+        let id = idnano!();
+        assert_eq!(id.len(), DEFAULT_SIZE);
+
+        //set size
+        let id_10 = idnano!(10);
+        assert_eq!(id_10.len(), 10);
+
+        //set size and alphabet
+        let id_alphabet_10 = idnano!(10, "01234567890".as_bytes());
+        assert_eq!(id_alphabet_10.len(), 10);
     }
 }
