@@ -63,7 +63,7 @@ pub fn new() -> String {
     return generate_string(DEFAULT_ALPHABET, DEFAULT_SIZE);
 }
 
-macro_rules! idnano {
+pub macro_rules! idnano {
     () => {
         new()
     };
