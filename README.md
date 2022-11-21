@@ -5,23 +5,27 @@ nanoid is a rust version of [nanoid](https://github.com/aidarkhanov/nanoid), imp
 Open ```Cargo.toml``` file, and add dependencies.
 ```
 [dependencies]
-idnano = "0.8.2"
+idnano = "0.8.3"
 ```
 
 Use macro to generate id.
-```aidl
-//default id
-        let id = idnano!();
-        assert_eq!(id.len(), DEFAULT_SIZE);
+```rust
+use idnano::*;
 
-        //set size
-        let id_10 = idnano!(10);
-        assert_eq!(id_10.len(), 10);
+fn main() {
+    let id: String = id!();
+    println!("id: {}", id); //id: g6-O7ul2xfd810SeN7Fjd for example.
 
-        //set size and alphabet
-        let id_alphabet_10 = idnano!(10, "01234567890".as_bytes());
-        assert_eq!(id_alphabet_10.len(), 10);
+    let id_10: String = id!(10);
+    println!("id: {}", id_10); // id: twMwyPTtd1 for example.
+
+    let id_alphabet: String = id!(10, "1234567890".as_bytes());
+    println!("id: {}", id_alphabet); // id: 6472071276 for example.
+}
+
 ```
+
+Use normal function to generate ids.
 
 Generate a default nano id.
 ```rust
